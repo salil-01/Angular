@@ -1,0 +1,23 @@
+#container {
+  width: 30%;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 7px;
+}
+#button-wrapper {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+}
+button {
+  height: 40px;
+  background-color: blue;
+  border-radius: 7px;
+  width: 100px;
+  color: white;
+  border: none;
+}

@@ -6,11 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter.component.css'],
 })
 export class CounterComponent {
+  maxx = 10;
   count = 0;
+  isDisabled = false;
   increment() {
-    this.count++;
+    if (this.count < this.maxx) {
+      this.count++;
+    }
+    this.updateButton();
   }
   decrement() {
-    this.count--;
+    if (this.count > 0) {
+      this.count--;
+    }
+    this.updateButton();
+  }
+  private updateButton() {
+    this.isDisabled = this.count === this.maxx;
   }
 }

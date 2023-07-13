@@ -1,8 +1,8 @@
-<div>
+<div id="container">
   <h3>My Counter Application</h3>
   <p>Count is {{ count }}</p>
-  <div>
-    <button (click)="increment()">ADD</button>
+  <div id="button-wrapper">
+    <button (click)="increment()" [disabled]="isDisabled">ADD</button>
     <button (click)="decrement()">SUBTRACT</button>
   </div>
 </div>
