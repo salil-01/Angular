@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { TodoComponent } from './pages/todo/todo.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { AddtodoComponent } from './addtodo/addtodo.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { AddtodoComponent } from './components/addtodo/addtodo.component';
 
 @NgModule({
   declarations: [

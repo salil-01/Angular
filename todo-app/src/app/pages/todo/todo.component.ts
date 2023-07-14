@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TodoService } from '../todo.service';
+import { TodoService } from '../../services/todo.service';
 interface todoItem {
   id: number;
   text: string;
