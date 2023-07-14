@@ -1,15 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import axios from 'axios';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostsService {
   private url: string = 'https://dummyjson.com/products';
-  constructor() {}
-  getData() {
-    axios.get(`${this.url}`).then((res) => {
-      console.log(res.data);
-    });
+  constructor(private http: HttpClient) {}
+  getData(): Observable<any> {
+    return this.http.get<any>(`${this.url}`);
+  }
+  deleteItem(id: number) {
+    console.log(id);
+    return this.http.delete<any>(`${this.url}/${id}`);
   }
 }

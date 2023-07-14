@@ -1,1 +1,15 @@
-<p>posts works!</p>
+<div style="margin: 30px auto">
+  <button>Add a Post</button>
+</div>
+<div id="wrapper">
+  <div *ngFor="let item of responseData">
+    <p>{{ item.id }}</p>
+    <p>{{ item.brand }}</p>
+    <p>{{ item.category }}</p>
+    <p>{{ item.description }}</p>
+    <div>
+      <button>Edit</button>
+      <button (click)="deleteProd(item.id)">Delete</button>
+    </div>
+  </div>
+</div>
