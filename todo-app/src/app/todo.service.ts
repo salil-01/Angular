@@ -4,7 +4,6 @@ interface todoItem {
   id: number;
   text: string;
   status: boolean;
-  editing: boolean;
 }
 
 @Injectable({
@@ -13,10 +12,11 @@ interface todoItem {
 export class TodoService {
   // constructor() { }
   todoList = [
-    { id: 1, text: 'Learn React', status: false, editing: false },
-    { id: 2, text: 'Learn Angular', status: false, editing: false },
-    { id: 3, text: 'Learn Vue', status: false, editing: false },
+    { id: 1, text: 'Learn React', status: false },
+    { id: 2, text: 'Learn Angular', status: false },
+    { id: 3, text: 'Learn Vue', status: false },
   ];
+  editedItemId: number | null = null;
 
   addTodoItem(item: string): void {
     // this.todoList.push(item);
@@ -24,8 +24,23 @@ export class TodoService {
       id: this.todoList.length + 1,
       text: item,
       status: true,
-      editing: false,
     };
     this.todoList.push(newTodo);
+  }
+  startEditing(id: number) {
+    this.editedItemId = id;
+  }
+  stopEditing() {
+    this.editedItemId = null;
+  }
+  isEditing(id: number): boolean {
+    return this.editedItemId === id;
+  }
+
+  deleteItem(id: number) {
+    // filtering out the deleted
+    const updatedTodo = this.todoList.filter((el: todoItem) => el.id !== id);
+    // updating original array
+    this.todoList = updatedTodo;
   }
 }
