@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AddtodoComponent } from './components/addtodo/addtodo.component';
+import { PostsComponent } from './pages/posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddtodoComponent } from './components/addtodo/addtodo.component';
     NavbarComponent,
     HomepageComponent,
     AddtodoComponent,
+    PostsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule, FormsModule],
   providers: [],
