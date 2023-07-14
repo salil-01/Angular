@@ -1,2 +1,15 @@
-<p>todo page</p>
-<a routerLink="/todo/add">Add Page</a>
+<h2>Todo Page</h2>
+<div class="wrapper">
+  <div *ngFor="let item of todoList">
+    <ng-container *ngIf="!item.editing; else editMode">
+      {{ item.text }}
+      <button (click)="editItem(item)">Edit</button>
+      <button (click)="deleteItem(item)">Delete</button>
+    </ng-container>
+    <ng-template #editMode>
+      <input type="text" [(ngModel)]="item.text" width="" />
+      <button (click)="saveItem(item)">Save</button>
+      <button (click)="cancelEdit(item)">Cancel</button>
+    </ng-template>
+  </div>
+</div>

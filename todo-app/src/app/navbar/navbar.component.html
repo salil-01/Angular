@@ -1,6 +1,21 @@
 <nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/todo">Todo</a>
-  <a routerLink="/todo/add">Add</a>
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a
+    routerLink="/todo"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Todo</a
+  >
+  <a
+    routerLink="/todo/add"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Add</a
+  >
 </nav>
 <!-- <h1>Ok</h1> -->
