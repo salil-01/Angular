@@ -1,2 +1,7 @@
 <!-- Html for my first component  -->
-<p class="header">My First Component</p>
+<div class="container">
+  <p class="header">My First Component {{ name }}</p>
+  <img *ngIf="name === 'Salil'" src="{{ userDetails?.image }}" alt="image" />
+  <p>{{ name === "Salil" ? "Incomplete Name" : "Complete Name" }}</p>
+  <button (click)="handleClick()" type="button">Click Me</button>
+</div>
