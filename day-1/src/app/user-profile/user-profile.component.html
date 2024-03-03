@@ -1,0 +1,26 @@
+<div class="flex flex-row items-center w-full justify-around">
+  <div class="flex flex-col gap-2 p-5">
+    <div class="flex flex-row items-end gap-5">
+      <h5 class="text-left text-3xl font-bold">
+        {{ userProfileData.name }}
+      </h5>
+      <button class="bg-black text-white rounded-md px-2 py-1">Follow</button>
+    </div>
+    <p class="text-left text-lg font-semibold">{{ userProfileData.title }}</p>
+    <div class="grid grid-cols-5 gap-2 mt-10">
+      <p
+        *ngFor="let item of userProfileData.skillsets"
+        class="border rounded-full p-1"
+      >
+        {{ item.name }}
+      </p>
+    </div>
+  </div>
+  <div>
+    <img
+      src="{{ userProfileData.avatar }}"
+      class="w-[150px] rounded-full"
+      alt="some text"
+    />
+  </div>
+</div>

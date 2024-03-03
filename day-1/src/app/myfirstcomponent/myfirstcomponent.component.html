@@ -1,7 +1,25 @@
 <!-- Html for my first component  -->
 <div class="container">
-  <p class="header">My First Component {{ name }}</p>
-  <img *ngIf="name === 'Salil'" src="{{ userDetails?.image }}" alt="image" />
-  <p>{{ name === "Salil" ? "Incomplete Name" : "Complete Name" }}</p>
-  <button (click)="handleClick()" type="button">Click Me</button>
+  <div>
+    <p class="header" *ngIf="showName">My First Component {{ name }}</p>
+    <img
+      *ngIf="name === 'Salil'"
+      src="{{ userDetails?.image }}"
+      alt="image"
+      height="100px"
+    />
+    <p>{{ name === "Salil" ? "Incomplete Name" : "Complete Name" }}</p>
+    <button (click)="handleClick()" type="button">Change Name</button>
+    <button (click)="handleShowName()">Show Name</button>
+  </div>
+  <div class="w-full border border-black items-center flex flex-col gap-2 py-3">
+    <h3 class="font-semibold underline text-center text-lg">List of Items</h3>
+    <app-skill-items [skillItems]="skillItems"></app-skill-items>
+  </div>
+  <div class="w-full border border-black">
+    <h3 class="font-semibold underline text-center text-lg">
+      User Details Component
+    </h3>
+    <app-user-profile [userProfileData]="userProfileData"></app-user-profile>
+  </div>
 </div>

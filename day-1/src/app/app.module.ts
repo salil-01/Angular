@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MyfirstcomponentComponent } from './myfirstcomponent/myfirstcomponent.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SkillItemsComponent } from './skill-items/skill-items.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     MyfirstcomponentComponent,
     NavbarComponent,
     FooterComponent,
+    SkillItemsComponent,
+    UserProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
